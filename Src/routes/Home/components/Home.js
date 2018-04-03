@@ -18,7 +18,10 @@ class Home extends Component {
         }
         return (
         <Container>
-            <MapContainer region={region} />
+            {/* to make sure it already exist else dont show */}
+            { this.props.region.latitude && 
+            <MapContainer region={this.props.region} />
+        }
         </Container>
         );
     }
